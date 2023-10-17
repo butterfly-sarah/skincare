@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: palevioletred;
+}
+img{
+    height: 60%;
+    margin-bottom: 10px;
+}
+.product span{
+    margin: 10px 0px;
+}
+.nav{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 15px 75px;
+}
+.nav i,p{
+    display: inline-block;
+}
+.search{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.search select,input{
+    width: 40%;
+    height: 30px;
+    margin: 10px 15px;
+}
+.products{
+    margin: auto;
+    flex-wrap: wrap;
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 25px;
+}
+.products .product{
+    width: 25%;
+    margin: 30px;
+    padding: 35px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 35px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.products .product img,span,button,h4{
+    display: block;
+}
+.products .product img{
+    width: 100%;
+}
+.cart{
+    display: inline-block;
+    position: absolute;
+    background-color: white;
+    padding: 25px;
+    display: none;
+    cursor: pointer;
+}
+.add{
+    display: block;
+    height: 35px;
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-left: auto;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+#items,#favs{
+    background-color: palevioletred;
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    padding: 35px;
+}
+.item,.tot,.vitem{
+    display: inline-block;
+    background-color: white;
+    color: #E91E63;
+    width: 35%;
+    margin: 15px auto;
+    text-align: center;
+    margin: 25px;
+    border-radius: 25px;
+    padding: 35px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.productName,.pri,.catag,.favc,.favn{
+    display: block;
+}
+.pri{
+    display: inline-block;
+}
+.padd ,.del{
+    display: inline-block;
+    padding: 5px 10px;
+    margin:  15px 0px;
+    font-weight: 700;
+    border: none;
+    background: none;
+    color: green;
+    font-size: 24px;
+}
+.padd ,.del:hover{
+    cursor: pointer;
+}
+.del{
+    color: red;
+}
+.pcount{
+    display: inline-block;
+    margin: 0 10px;
+    color: #E91E63;
+    font-weight: 700;
+}
+.elem{
+    display: inline-block;
+    width: 120px;
+    color: white;
+    background-color: #E91E63;
+    padding: 5px;
+}
+.pdiv{
+    margin: 15px 0px;
+}
+span,.productName{
+    display: inline-block;
+}
+.remove{
+    background-color: red;
+    padding: 10px;
+    color: white;
+    margin: auto;
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.remove:hover{
+    cursor: pointer;
+}
+.heart{
+    background: none;
+    border: none;
+    position: relative;
+    top: 25px;
+}
+.fa-heart{
+    color: grey;
+    font-size: 20px;
+    cursor: pointer;
+}
+.fa-heart:hover{
+    color: rgb(147, 92, 92);
+}
+.r{
+    color: red;
+    display: inline-block;
+    position: relative;
+    left: 10px;
+}
+.searchinp,#selection{
+    appearance: none;
+	border: none;
+	outline: none;
+	border-bottom: .2em solid #E91E63;
+	background: rgba(#E91E63, .2);
+	border-radius: .2em .2em 0 0;
+	padding: .4em;
+	color: #E91E63;
+    
+}
+#selection option:hover{
+    box-shadow: 0 0 10px 100px #E91E63 inset;
+    color: black;
+}
+.logout{
+    appearance: none;
+	border: .2em solid #E91E63;
+	background: hsl(0 0 0/0);
+	padding: .85em 1.5em;
+	color: #E91E63;
+	border-radius: 2em;
+	transition: 1s;
+	&:hover, &:focus, &:active {
+		background: #E91E63;
+		color: #fff;
+	}
+}
+.web,.fa-cart-shopping{
+    color: #E91E63;
+    font-size: 34px;
+}
+.fa-cart-shopping:hover{
+    cursor: pointer;
+}
+#user{
+    color: #E91E63;
+    font-size: 30px;
+}
+#count{
+    font-size: 14px;
+    color: white;
+    background-color: #E91E63;
+    padding: 1px 5px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+.cart button{
+    margin: auto;
+    background:none;
+    border: none;
+    color: #E91E63;
+    font-size: 16px;
+    font-weight: 700;
+}
+.cart button:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+#items h3,#favs h3{
+    color: #fff;
+    font-size: 34px;
+}
+.favc,.favn{
+    display: inline-block;
+}
+.regisform{
+    display: inline-block;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    padding: 100px 70px;
+    border-radius: 35px;
+    color: #E91E63;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.regisform input{
+    width: 400px;
+    appearance: none;
+	border: none;
+	outline: none;
+	border-bottom: .2em solid #E91E63;
+	background: rgba(#E91E63, .2);
+	border-radius: .2em .2em 0 0;
+	padding: .4em;
+	color: #E91E63;
+}
+.regisform p{
+    width: 80px;
+    font-weight: 700;
+}
+.regisform button{
+    margin: auto;
+    background:none;
+    margin-top: 35px;
+    color: #E91E63;
+    border: 2px solid #E91E63;
+    border-radius: 15px;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.regisform button:hover{
+    cursor: pointer;
+    background-color: #E91E63;
+    color: #fff;
+}
+.regisform h1{
+    margin-bottom: 15px;
+}

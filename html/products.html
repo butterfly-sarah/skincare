@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/607b2578c7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav">
+        <p class="web">SELF CARE</p>
+        <h3 id="user"></h3>
+        <span>
+                <i class="fa-solid fa-cart-shopping" onclick="showcart()"></i><p id="count">0</p>
+                <div name="" class="cart">
+                    <div id="cart"></div>
+                    <button onclick="window.location='index.html'">view all</button>
+                </div>
+        </span>
+        <button onclick="logout()" class="logout">log out</button>
+    </div>
+    <div class="search">
+        <select name="" id="selection">
+            <option value="name">search by name</option>
+            <option value="catagory">search by catagory</option>
+        </select>
+        <input class="searchinp" type="search" placeholder="search" onkeyup="search(this.value)">
+    </div>
+    <hr>
+    <div class="products">
+        <div class="product">
+            <img src="../images/57167_CLOSED_R.jpg" alt="">
+            <span>
+                <h4>product: <p class="pname">elf serum</p></h4>
+                <h4>price: <p class="price">100</p> $</h4>
+                <h4>catagory: <p class="pcatagory">Serum</p></h4>
+            </span>
+            <button class="heart"><i class="fa-solid fa-heart"></i></button>
+            <button class="add" onclick="addtocart(this.parentNode,this)">add to cart</button>
+        </div>
+        <div class="product">
+            <img src="../images/images.jpg" alt="">
+            <span>
+                <h4>product: <p class="pname">la rouche serum</p></h4>
+                <h4>price: <p class="price">95</p> $</h4>
+                <h4>catagory: <p class="pcatagory">Serum</p></h4>
+            </span>
+            <button class="heart"><i class="fa-solid fa-heart"></i></button>
+            <button class="add" onclick="addtocart(this.parentNode,this)">add to cart</button>
+        </div>
+        <div class="product">
+            <img src="../images/619ck2ZmTHL.jpg" alt="">
+            <span>
+                <h4>product: <p class="pname">Khadi-Essentials</p></h4>
+                <h4>price: <p class="price">80</p> $</h4>
+                <h4>catagory: <p class="pcatagory">Hair Mask</p></h4>
+            </span>
+            <button class="heart"><i class="fa-solid fa-heart"></i></button>
+            <button class="add" onclick="addtocart(this.parentNode,this)">add to cart</button>
+        </div>
+        <div class="product">
+            <img src="../images/VICHY-SERUM-LIFTACTIV-B3-DARK-SPOTS-SERUM-PACKSHOT-TEXTURE-1080x1080.jpg" alt="">
+            <span>
+                <h4>product: <p class="pname">vichy serum</p></h4>
+                <h4>price: <p class="price">80</p> $</h4>
+                <h4>catagory: <p class="pcatagory">Serum</p></h4>
+            </span>
+            <button class="heart"><i class="fa-solid fa-heart"></i></button>
+            <button class="add" onclick="addtocart(this.parentNode,this)">add to cart</button>
+        </div>
+        <div class="product">
+            <img src="../images/1.jpg" alt="">
+            <span>
+                <h4>product: <p class="pname">ever-pure</p></h4>
+                <h4>price: <p class="price">70</p> $</h4>
+                <h4>catagory: <p class="pcatagory">Hair Mask</p></h4>
+            </span>
+            <button class="heart"><i class="fa-solid fa-heart"></i></button>
+            <button class="add" onclick="addtocart(this.parentNode,this)">add to cart</button>
+        </div>
+        <div class="product">
+            <img src="../images/51RlJF8YS1L.jpg" alt="">
+            <span>
+                <h4>product: <p class="pname">balea perfume</p></h4>
+                <h4>price: <p class="price">107</p> $</h4>
+                <h4>catagory: <p class="pcatagory">Body Lotion</p></h4>
+            </span>
+            <button class="heart"><i class="fa-solid fa-heart"></i></button>
+            <button class="add" onclick="addtocart(this.parentNode,this)">add to cart</button>
+        </div>
+        <div class="product">
+            <img src="../images/718MDB7Bu9L.jpg" alt="">
+            <span>
+                <h4>product: <p class="pname">victoria secret</p></h4>
+                <h4>price: <p class="price">140</p> $</h4>
+                <h4>catagory: <p class="pcatagory">Body Mist</p></h4>
+            </span>
+            <button class="heart"><i class="fa-solid fa-heart"></i></button>
+            <button class="add" onclick="addtocart(this.parentNode,this)">add to cart</button>
+        </div>
+        <div class="product">
+            <img src="../images/31d+nj+XWbL._AC_SR300,300.jpg" alt="">
+            <span>
+                <h4>product: <p class="pname">vaseline</p></h4>
+                <h4>price: <p class="price">50</p> $</h4>
+                <h4>catagory: <p class="pcatagory">Body Lotion</p></h4>
+            </span>
+            <button class="heart"><i class="fa-solid fa-heart"></i></button>
+            <button class="add" onclick="addtocart(this.parentNode,this)">add to cart</button>
+        </div>
+        <div class="product">
+            <img src="../images/6674548032117_main_1700wx1700h.jpg" alt="">
+            <span>
+                <h4>product: <p class="pname">bath and body</p></h4>
+                <h4>price: <p class="price">200</p> $</h4>
+                <h4>catagory: <p class="pcatagory">Body Lotion</p></h4>
+            </span>
+            <button class="heart"><i class="fa-solid fa-heart"></i></button>
+            <button class="add" onclick="addtocart(this.parentNode,this)">add to cart</button>
+        </div>
+    </div>
+    <script src="../products.js"></script>
+</body>
+</html>
