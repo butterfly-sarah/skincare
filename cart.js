@@ -1,6 +1,6 @@
 function logout(){
     localStorage.clear()
-    window.location=("signup.html")
+    window.location=("html/signup.html")
 }
 if(localStorage.getItem("products")!=null&&localStorage.getItem("products")!=''){
         var selectedItems=document.getElementById("items")
